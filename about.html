@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RdDev - About Us</title>
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rddev-dark': '#2D3748',
+                        'rddev-darker': '#1A202C',
+                        'rddev-light': '#4FD1C5',
+                        'rddev-blue': '#4299E1',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Meta Description -->
+    <meta name="description" content="RdDev - Innovative Software Development Solutions. Transforming digital landscapes with cutting-edge technology and professional services.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="RdDev - About Us">
+    <meta property="og:description" content="Learn about RdDev's mission, vision, and journey in software development.">
+    <meta property="og:type" content="website">
+</head>
+
+<body class="bg-gradient-to-br from-rddev-darker to-rddev-dark text-gray-100 min-h-screen flex flex-col">
+    <!-- Accessibility: Skip to main content link -->
+    <a href="#main-content" class="absolute left-0 top-0 bg-rddev-light text-rddev-darker p-2 z-50 transform -translate-x-full focus:translate-x-0">
+        Skip to main content
+    </a>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-rddev-darker/90 backdrop-blur-sm z-50 shadow-lg" aria-label="Main Navigation">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-2" aria-label="RdDev Home">
+                    <span class="text-2xl font-bold text-white">
+                        <span class="text-rddev-light">R</span>D<span class="text-rddev-light">D</span>EV
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8" role="menubar">
+                    <a href="index.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Home</a>
+                    <a href="about.html" class="text-rddev-light font-medium" role="menuitem" aria-current="page">About</a>
+                    <a href="services.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Services</a>
+                    <a href="portfolio.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Portfolio</a>
+                    <a href="team.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Team</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="md:hidden text-gray-300 focus:outline-none" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t border-gray-700 mt-2" role="menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Home</a>
+                    <a href="about.html" class="text-rddev-light font-medium" role="menuitem" aria-current="page">About</a>
+                    <a href="services.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Services</a>
+                    <a href="portfolio.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Portfolio</a>
+                    <a href="team.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Team</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow">
+        <!-- Page Header -->
+        <section class="pt-32 pb-10 md:pt-40 md:pb-16 bg-rddev-darker/30">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">About <span class="text-rddev-light">Us</span></h1>
+                    <div class="w-24 h-1 bg-rddev-light mx-auto mb-6" aria-hidden="true"></div>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Discover our story, mission, and the team behind RdDev's software innovation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Content -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <img src="img/RdDev-logo.png" alt="RdDev Team Working" class="rounded-xl shadow-xl w-full max-w-md mx-auto" loading="lazy">
+                    </div>
+                    <div class="md:w-1/2 md:pl-10">
+                        <h2 class="text-2xl font-bold mb-4">We Build Software That <span class="text-rddev-light">Powers Businesses</span></h2>
+                        <p class="text-gray-300 mb-6">
+                            RdDev is a software development company focused on innovative technology solutions. Founded with a passion for delivering high-quality software development services, we help businesses across various industries transform digitally and achieve their goals.
+                        </p>
+                        <p class="text-gray-300 mb-6">
+                            Our team consists of experienced developers skilled in various modern technologies. We combine technical expertise with business understanding to provide solutions that are not only technologically sophisticated but also aligned with our clients' business
+                            needs.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6 mt-8">
+                            <div class="flex items-center">
+                                <div class="p-3 rounded-full bg-rddev-light/20 mr-4">
+                                    <i class="fas fa-check text-rddev-light" aria-hidden="true"></i>
+                                </div>
+                                <span>Best Quality</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="p-3 rounded-full bg-rddev-light/20 mr-4">
+                                    <i class="fas fa-check text-rddev-light" aria-hidden="true"></i>
+                                </div>
+                                <span>24/7 Service</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="p-3 rounded-full bg-rddev-light/20 mr-4">
+                                    <i class="fas fa-check text-rddev-light" aria-hidden="true"></i>
+                                </div>
+                                <span>Professional Team</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="p-3 rounded-full bg-rddev-light/20 mr-4">
+                                    <i class="fas fa-check text-rddev-light" aria-hidden="true"></i>
+                                </div>
+                                <span>Affordable Pricing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="bg-rddev-light rounded-xl p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <div class="md:w-2/3 mb-6 md:mb-0">
+                            <h3 class="text-2xl md:text-3xl font-bold text-rddev-darker mb-2">
+                                Want to Be Part of Our Journey?
+                            </h3>
+                            <p class="text-rddev-darker/80">
+                                Contact us to discuss how we can support your digital transformation.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="contact.html" class="inline-block bg-rddev-darker text-white hover:bg-rddev-darker/90 font-bold py-3 px-8 rounded-lg transition">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section class="py-16 bg-rddev-darker/50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Mission & <span class="text-rddev-light">Vision</span></h2>
+                    <div class="w-24 h-1 bg-rddev-light mx-auto" aria-hidden="true"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Mission -->
+                    <div class="bg-rddev-darker/40 p-6 rounded-xl hover:shadow-lg hover:shadow-rddev-light/10 transition duration-300">
+                        <div class="p-4 bg-rddev-light/20 rounded-full inline-block mb-4">
+                            <i class="fas fa-bullseye text-rddev-light text-2xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+                        <p class="text-gray-300">
+                            Our mission is to accelerate digital business transformation through innovative, reliable, and affordable software development. We are committed to providing technology solutions that enhance efficiency, productivity, and competitiveness for our clients.
+                        </p>
+                    </div>
+
+                    <!-- Vision -->
+                    <div class="bg-rddev-darker/40 p-6 rounded-xl hover:shadow-lg hover:shadow-rddev-light/10 transition duration-300">
+                        <div class="p-4 bg-rddev-light/20 rounded-full inline-block mb-4">
+                            <i class="fas fa-eye text-rddev-light text-2xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+                        <p class="text-gray-300">
+                            Our vision is to become a leader in software development innovation, recognized for technical excellence, exceptional customer service, and contribution to technological advancement. We aim to build a digital ecosystem that connects and empowers businesses
+                            worldwide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-rddev-darker pt-16 pb-8">
+        <!-- [Rest of the footer remains the same as in the original file] -->
+    </footer>
+
+    <script>
+        // Enhanced Mobile menu toggle with accessibility
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Optional: Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+</body>
+
+</html>

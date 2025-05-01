@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RdDev - Our Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rddev-dark': '#2D3748',
+                        'rddev-darker': '#1A202C',
+                        'rddev-light': '#4FD1C5',
+                        'rddev-blue': '#4299E1',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body class="bg-gradient-to-br from-rddev-darker to-rddev-dark text-gray-100 min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-rddev-darker/90 backdrop-blur-sm z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold text-white">
+                        <span class="text-rddev-light">R</span>D<span class="text-rddev-light">D</span>EV
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-300 hover:text-rddev-light transition">Home</a>
+                    <a href="about.html" class="text-gray-300 hover:text-rddev-light transition">About</a>
+                    <a href="services.html" class="text-gray-300 hover:text-rddev-light transition">Services</a>
+                    <a href="portfolio.html" class="text-gray-300 hover:text-rddev-light transition">Portfolio</a>
+                    <a href="team.html" class="text-rddev-light font-medium">Team</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-rddev-light transition">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="md:hidden text-gray-300 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t border-gray-700 mt-2">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="text-gray-300 hover:text-rddev-light transition">Home</a>
+                    <a href="about.html" class="text-gray-300 hover:text-rddev-light transition">About</a>
+                    <a href="services.html" class="text-gray-300 hover:text-rddev-light transition">Services</a>
+                    <a href="portfolio.html" class="text-gray-300 hover:text-rddev-light transition">Portfolio</a>
+                    <a href="team.html" class="text-rddev-light font-medium">Team</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-rddev-light transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-10 md:pt-40 md:pb-16 bg-rddev-darker/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Our <span class="text-rddev-light">Team</span></h1>
+                <div class="w-24 h-1 bg-rddev-light mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Meet the talented professionals behind RdDev's innovative software solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Leadership <span class="text-rddev-light">Team</span></h2>
+                <div class="w-24 h-1 bg-rddev-light mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Leader 1 -->
+                <div class="bg-rddev-darker/40 rounded-xl overflow-hidden text-center group">
+                    <div class="relative">
+                        <img src="/api/placeholder/400/400" alt="Team Leader" class="w-full h-80 object-cover" />
+                        <div class="absolute inset-0 bg-rddev-light/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Sarah Williams</h3>
+                        <p class="text-rddev-light mb-4">CTO</p>
+                        <p class="text-gray-300">
+                            Sarah adalah ahli teknologi dengan keahlian dalam arsitektur sistem dan pengembangan aplikasi berbasis cloud dengan pengalaman lebih dari 10 tahun.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Leader 3 -->
+                <div class="bg-rddev-darker/40 rounded-xl overflow-hidden text-center group">
+                    <div class="relative">
+                        <img src="/api/placeholder/400/400" alt="Team Leader" class="w-full h-80 object-cover" />
+                        <div class="absolute inset-0 bg-rddev-light/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Michael Johnson</h3>
+                        <p class="text-rddev-light mb-4">COO</p>
+                        <p class="text-gray-300">
+                            Michael mengelola operasional perusahaan dengan pengalaman 12 tahun dalam manajemen proyek dan pengembangan bisnis teknologi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Team -->
+    <section class="py-16 bg-rddev-darker/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Development <span class="text-rddev-light">Team</span></h2>
+                <div class="w-24 h-1 bg-rddev-light mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Dev 1 -->
+                <div class="bg-rddev-darker/40 rounded-xl overflow-hidden text-center group">
+                    <div class="relative">
+                        <img src="/api/placeholder/300/300" alt="Team Member" class="w-full h-64 object-cover" />
+                        <div class="absolute inset-0 bg-rddev-light/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">David Lee</h3>
+                        <p class="text-rddev-light">Lead Frontend Developer</p>
+                    </div>
+                </div>
+
+                <!-- Dev 2 -->
+                <div class="bg-rddev-darker/40 rounded-xl overflow-hidden text-center group">
+                    <div class="relative">
+                        <img src="/api/placeholder/300/300" alt="Team Member" class="w-full h-64 object-cover" />
+                        <div class="absolute inset-0 bg-rddev-light/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Emma Clark</h3>
+                        <p class="text-rddev-light">Lead Backend Developer</p>
+                    </div>
+                </div>
+
+                <!-- Dev 3 -->
+                <div class="bg-rddev-darker/40 rounded-xl overflow-hidden text-center group">
+                    <div class="relative">
+                        <img src="/api/placeholder/300/300" alt="Team Member" class="w-full h-64 object-cover" />
+                        <div class="absolute inset-0 bg-rddev-light/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Alex Kim</h3>
+                        <p class="text-rddev-light">Mobile Developer</p>
+                    </div>
+                </div>
+
+                <!-- Dev 4 -->
+                <div class="bg-rddev-darker/40 rounded-xl overflow-hidden text-center group">
+                    <div class="relative">
+                        <img src="/api/placeholder/300/300" alt="Team Member" class="w-full h-64 object-cover" />
+                        <div class="absolute inset-0 bg-rddev-light/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Jessica Wong</h3>
+                        <p class="text-rddev-light">UI/UX Designer</p>
+                    </div>
+                </div>
+
+                <!-- Dev 5 -->
+                <div class="bg-rddev-darker/40 rounded-xl overflow-hidden text-center group">
+                    <div class="relative">
+                        <img src="/api/placeholder/300/300" alt="Team Member" class="w-full h-64 object-cover" />
+                        <div class="absolute inset-0 bg-rddev-light/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Robert Chen</h3>
+                        <p class="text-rddev-light">DevOps Engineer</p>
+                    </div>
+                </div>
+
+                <!-- Dev 6 -->
+                <div class="bg-rddev-darker/40 rounded-xl overflow-hidden text-center group">
+                    <div class="relative">
+                        <img src="/api/placeholder/300/300" alt="Team Member" class="w-full h-64 object-cover" />
+                        <div class="absolute inset-0 bg-rddev-light/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Olivia Brown</h3>
+                        <p class="text-rddev-light">QA Engineer</p>
+                    </div>
+                </div>
+
+                <!-- Dev 7 -->
+                <div class="bg-rddev-darker/40 rounded-xl overflow-hidden text-center group">
+                    <div class="relative">
+                        <img src="/api/placeholder/300/300" alt="Team Member" class="w-full h-64 object-cover" />
+                        <div class="absolute inset-0 bg-rddev-light/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Daniel Park</h3>
+                        <p class="text-rddev-light">Full Stack Developer</p>
+                    </div>
+                </div>
+
+                <!-- Dev 8 -->
+                <div class="bg-rddev-darker/40 rounded-xl overflow-hidden text-center group">
+                    <div class="relative">
+                        <img src="/api/placeholder/300/300" alt="Team Member" class="w-full h-64 object-cover" />
+                        <div class="absolute inset-0 bg-rddev-light/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Sophia Garcia</h3>
+                        <p class="text-rddev-light">Data Scientist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business & Support Team -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Business & <span class="text-rddev-light">Support</span></h2>
+                <div class="w-24 h-1 bg-rddev-light mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Member 1 -->
+                <div class="bg-rddev-darker/40 rounded-xl overflow-hidden text-center group">
+                    <div class="relative">
+                        <img src="/api/placeholder/400/300" alt="Team Member" class="w-full h-64 object-cover" />
+                        <div class="absolute inset-0 bg-rddev-light/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Amanda Taylor</h3>
+                        <p class="text-rddev-light">Marketing Director</p>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="bg-rddev-darker/40 rounded-xl overflow-hidden text-center group">
+                    <div class="relative">
+                        <img src="/api/placeholder/400/300" alt="Team Member" class="w-full h-64 object-cover" />
+                        <div class="absolute inset-0 bg-rddev-light/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">James Wilson</h3>
+                        <p class="text-rddev-light">Business Development</p>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="bg-rddev-darker/40 rounded-xl overflow-hidden text-center group">
+                    <div class="relative">
+                        <img src="/api/placeholder/400/300" alt="Team Member" class="w-full h-64 object-cover" />
+                        <div class="absolute inset-0 bg-rddev-light/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-rddev-darker hover:text-white transition">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Linda Martinez</h3>
+                        <p class="text-rddev-light">Customer Support Lead</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Our Team Section -->
+    <section class="py-16 bg-rddev-darker/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Join Our <span class="text-rddev-light">Team</span></h2>
+                <div class="w-24 h-1 bg-rddev-light mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    We're always looking for talented individuals to join our growing team.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Position 1 -->
+                <div class="bg-rddev-darker/40 p-6 rounded-xl hover:shadow-lg hover:shadow-rddev-light/10 transform hover:-translate-y-1 transition duration-300">
+                    <h3 class="text-xl font-bold mb-2">Senior React Developer</h3>
+                    <p class="text-rddev-light mb-4">Full-time • Remote</p>
+                    <p class="text-gray-300 mb-6">
+                        We're looking for an experienced React developer to join our frontend team and help build beautiful, responsive web applications.
+                    </p>
+                    <a href="contact.html" class="inline-block text-rddev-light hover:text-rddev-light/80 font-semibold">
+                        Apply Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Position 2 -->
+                <div class="bg-rddev-darker/40 p-6 rounded-xl hover:shadow-lg hover:shadow-rddev-light/10 transform hover:-translate-y-1 transition duration-300">
+                    <h3 class="text-xl font-bold mb-2">Backend Engineer (Node.js)</h3>
+                    <p class="text-rddev-light mb-4">Full-time • Remote</p>
+                    <p class="text-gray-300 mb-6">
+                        Join our backend team to develop scalable APIs and microservices using Node.js, Express, and MongoDB.
+                    </p>
+                    <a href="contact.html" class="inline-block text-rddev-light hover:text-rddev-light/80 font-semibold">
+                        Apply Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Position 3 -->
+                <div class="bg-rddev-darker/40 p-6 rounded-xl hover:shadow-lg hover:shadow-rddev-light/10 transform hover:-translate-y-1 transition duration-300">
+                    <h3 class="text-xl font-bold mb-2">UI/UX Designer</h3>
+                    <p class="text-rddev-light mb-4">Full-time • Hybrid</p>
+                    <p class="text-gray-300 mb-6">
+                        We're seeking a creative UI/UX designer to craft intuitive and engaging user experiences for our web and mobile applications.
+                    </p>
+                    <a href="contact.html" class="inline-block text-rddev-light hover:text-rddev-light/80 font-semibold">
+                        Apply Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-gray-300 mb-6">
+                    Don't see the right position? Send us your resume anyway! We're always looking for talented people.
+                </p>
+                <a href="contact.html" class="inline-block bg-rddev-light hover:bg-rddev-light/90 text-rddev-darker font-bold py-3 px-8 rounded-lg transition">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rddev-darker pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h4 class="text-xl font-bold mb-6">
+                        <span class="text-2xl font-bold text-white">
+                            <span class="text-rddev-light">R</span>D<span class="text-rddev-light">D</span>EV
+                        </span>
+                    </h4>
+                    <p class="text-gray-400 mb-6">
+                        Turning your ideas into digital reality with cutting-edge software development solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-rddev-light transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-rddev-light transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-rddev-light transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-rddev-light transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-rddev-light transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-rddev-light transition">About</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-rddev-light transition">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-rddev-light transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">Web Development</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">Mobile App Development</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">Custom Software</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">API Integration</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">IT Consulting</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-rddev-light mr-3 mt-1"></i>
+                            <span class="text-gray-400">123 Tech Street, Jakarta, Indonesia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-rddev-light mr-3"></i>
+                            <a href="tel:08988285622" class="text-gray-400 hover:text-rddev-light transition">
+                                +62 898-828-5622
+                            </a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-rddev-light mr-3"></i>
+                            <a href="mailto:rdmfr59@gmail.com" class="text-gray-400 hover:text-rddev-light transition">
+                                rdmfr59@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-center text-gray-500">
+                    &copy; 2025 RdDev. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>

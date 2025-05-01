@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RdDev - Our Services</title>
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+
+    <!-- Meta Description -->
+    <meta name="description" content="RdDev offers comprehensive software development services including web development, mobile app development, data analysis, and IT consulting.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="RdDev - Our Services">
+    <meta property="og:description" content="Discover our full range of software development and technology services tailored to your business needs.">
+    <meta property="og:type" content="website">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rddev-dark': '#2D3748',
+                        'rddev-darker': '#1A202C',
+                        'rddev-light': '#4FD1C5',
+                        'rddev-blue': '#4299E1',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out forwards'
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(20px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+        .technology-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(79, 209, 197, 0.2);
+        }
+        
+        .service-card:hover {
+            transition: transform 0.3s, box-shadow 0.3s;
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(79, 209, 197, 0.15);
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-rddev-darker to-rddev-dark text-gray-100 min-h-screen flex flex-col">
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="absolute left-0 top-0 bg-rddev-light text-rddev-darker p-2 z-50 transform -translate-x-full focus:translate-x-0">
+        Skip to main content
+    </a>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-rddev-darker/90 backdrop-blur-sm z-50 shadow-lg" aria-label="Main Navigation">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-2" aria-label="RdDev Home">
+                    <span class="text-2xl font-bold text-white">
+                        <span class="text-rddev-light">R</span>D<span class="text-rddev-light">D</span>EV
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8" role="menubar">
+                    <a href="index.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Home</a>
+                    <a href="about.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">About</a>
+                    <a href="services.html" class="text-rddev-light font-medium" role="menuitem" aria-current="page">Services</a>
+                    <a href="portfolio.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Portfolio</a>
+                    <a href="team.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Team</a>
+                    <a href="contact.html" class="inline-block text-rddev-light hover:text-rddev-light/80 font-semibold" role="menuitem">
+                        Learn More <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="md:hidden text-gray-300 focus:outline-none" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t border-gray-700 mt-2" role="menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Home</a>
+                    <a href="about.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">About</a>
+                    <a href="services.html" class="text-rddev-light font-medium" role="menuitem" aria-current="page">Services</a>
+                    <a href="portfolio.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Portfolio</a>
+                    <a href="team.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Team</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-rddev-light transition" role="menuitem">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow">
+        <!-- Page Header -->
+        <section class="pt-32 pb-10 md:pt-40 md:pb-16 bg-rddev-darker/30">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Our <span class="text-rddev-light">Services</span></h1>
+                    <div class="w-24 h-1 bg-rddev-light mx-auto mb-6" aria-hidden="true"></div>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        We offer a comprehensive range of software development services to help your business thrive in the digital landscape.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Services -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Web Development -->
+                    <div class="service-card bg-rddev-darker/40 p-6 rounded-xl hover:shadow-lg hover:shadow-rddev-light/10 transform hover:-translate-y-1 transition duration-300">
+                        <div class="p-4 bg-rddev-light/20 rounded-full inline-block mb-4">
+                            <i class="fas fa-globe text-rddev-light text-2xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="text-xl font-bold mb-4">Web Development</h2>
+                        <p class="text-gray-300 mb-4">
+                            We build responsive, modern, and functional websites, web applications, and e-commerce platforms using cutting-edge technologies.
+                        </p>
+                        <ul class="space-y-2 text-gray-300 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Predictive Analytics</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Natural Language Processing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Machine Learning Models</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Data Visualization</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-block text-rddev-light hover:text-rddev-light/80 font-semibold">
+                            Learn More <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+
+                    <!-- Custom Software Development -->
+                    <div class="service-card bg-rddev-darker/40 p-6 rounded-xl hover:shadow-lg hover:shadow-rddev-light/10 transform hover:-translate-y-1 transition duration-300">
+                        <div class="p-4 bg-rddev-light/20 rounded-full inline-block mb-4">
+                            <i class="fas fa-server text-rddev-light text-2xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="text-xl font-bold mb-4">Custom Software Development</h2>
+                        <p class="text-gray-300 mb-4">
+                            We design and develop custom software solutions to automate business processes and enhance operational efficiency.
+                        </p>
+                        <ul class="space-y-2 text-gray-300 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Enterprise Solutions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Business Process Automation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Scalable Architectures</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Legacy System Modernization</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-block text-rddev-light hover:text-rddev-light/80 font-semibold">
+                            Learn More <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Services -->
+        <section class="py-16 bg-rddev-darker/50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Mobile App Development -->
+                    <div class="service-card bg-rddev-darker/40 p-6 rounded-xl hover:shadow-lg hover:shadow-rddev-light/10 transform hover:-translate-y-1 transition duration-300">
+                        <div class="p-4 bg-rddev-light/20 rounded-full inline-block mb-4">
+                            <i class="fas fa-mobile-alt text-rddev-light text-2xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="text-xl font-bold mb-4">Mobile App Development</h2>
+                        <p class="text-gray-300 mb-4">
+                            We develop intuitive, high-performance mobile applications for iOS and Android that meet your business requirements.
+                        </p>
+                        <ul class="space-y-2 text-gray-300 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>iOS App Development</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Android App Development</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Cross-Platform Apps</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>API & Backend Integration</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-block text-rddev-light hover:text-rddev-light/80 font-semibold">
+                    Learn More <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                </a>
+                    </div>
+
+                    <!-- Data Analysis & AI -->
+                    <div class="service-card bg-rddev-darker/40 p-6 rounded-xl hover:shadow-lg hover:shadow-rddev-light/10 transform hover:-translate-y-1 transition duration-300">
+                        <div class="p-4 bg-rddev-light/20 rounded-full inline-block mb-4">
+                            <i class="fas fa-chart-line text-rddev-light text-2xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="text-xl font-bold mb-4">Data Analysis & AI</h2>
+                        <p class="text-gray-300 mb-4">
+                            We leverage advanced machine learning and natural language processing techniques to extract meaningful insights from your data.
+                        </p>
+                        <ul class="space-y-2 text-gray-300 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Predictive Analytics</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Natural Language Processing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Machine Learning Models</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Data Visualization</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-block text-rddev-light hover:text-rddev-light/80 font-semibold">
+                    Learn More <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                </a>
+                    </div>
+
+                    <!-- Enterprise Management Systems -->
+                    <div class="service-card bg-rddev-darker/40 p-6 rounded-xl hover:shadow-lg hover:shadow-rddev-light/10 transform hover:-translate-y-1 transition duration-300">
+                        <div class="p-4 bg-rddev-light/20 rounded-full inline-block mb-4">
+                            <i class="fas fa-building text-rddev-light text-2xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="text-xl font-bold mb-4">Enterprise Management Systems</h2>
+                        <p class="text-gray-300 mb-4">
+                            We develop comprehensive enterprise management solutions to streamline operations and improve organizational efficiency.
+                        </p>
+                        <ul class="space-y-2 text-gray-300 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Enterprise Management Solutions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Business Process Automation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>Industry-Specific Software</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rddev-light mr-2 mt-1" aria-hidden="true"></i>
+                                <span>System Migration & Upgrades</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-block text-rddev-light hover:text-rddev-light/80 font-semibold">
+                    Learn More <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies Section -->
+        <section class="py-16 bg-rddev-darker/50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Technologies We <span class="text-rddev-light">Use</span></h2>
+                    <div class="w-24 h-1 bg-rddev-light mx-auto" aria-hidden="true"></div>
+                    <p class="text-gray-300 mt-6 max-w-2xl mx-auto">
+                        We leverage the latest technologies to deliver innovative and efficient solutions for our clients.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                    <!-- React -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="React Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <i class="fab fa-react text-rddev-light text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">React</h3>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Python Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <i class="fab fa-python text-rddev-light text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Python</h3>
+                    </div>
+
+                    <!-- TensorFlow -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="TensorFlow Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNNTUuNiAxNS40bC0yMC44IDEyLjEgMjAuOCAxMi4xIDIwLjgtMTIuMXoiIGZpbGw9IiNmZmMxMDciLz48cGF0aCBkPSJNMzQuOCAyNy41djI0LjNsMjAuOCAxMi4xdi0yNC4zeiIgZmlsbD0iIzRlYWZlNiIvPjxwYXRoIGQ9Ik03Ni40IDI3LjVMNTUuNiAzOS42djI0LjNsMjAuOC0xMi4xeiIgZmlsbD0iIzBlZDNmZiIvPjxwYXRoIGQ9Ik0zNC44IDUxLjh2MjQuM2wyMC44IDEyLjF2LTI0LjN6IiBmaWxsPSIjMTFhODc5Ii8+PHBhdGggZD0iTTc2LjQgNTEuOGwtMjAuOCAxMi4xdjI0LjNsMjAuOC0xMi4xeiIgZmlsbD0iIzM3NzdmZiIvPjwvc3ZnPg=="
+                                alt="TensorFlow" class="w-8 h-8 mx-auto mb-2" aria-hidden="true" />
+                        </div>
+                        <h3 class="text-lg font-bold">TensorFlow</h3>
+                    </div>
+
+                    <!-- Scikit-learn -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Scikit-learn Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNNTAgNWMtMjQuOCAwLTQ1IDIwLjItNDUgNDVzMjAuMiA0NSA0NSA0NSA0NS0yMC4yIDQ1LTQ1LTIwLjItNDUtNDUtNDV6bS0yMi41IDMzLjJjLTEuNC0yLjQtMi4yLTUuMi0yLjItOC4yIDAtOC43IDcuMS0xNS44IDE1LjgtMTUuOGg4Ljd2MTguM0gwdi02LjNjMCAyLjEuOCA0LjEgMi4yIDUuNiAxLjQgMS41IDMuNCAyLjMgNS42IDIuM3ptMjcuNSA4Ljh2MTguM2gtNi41Yy0yLjEgMC00LjEtLjgtNS42LTIuMi0xLjQtMS40LTIuMi0zLjQtMi4yLTUuNiAwLTYuNyA1LjQtMTIuMSAxMi4xLTEyLjFoMi4yem0tMTIuMS0xMC45Yy0xLjMgMC0yLjYuNS0zLjYgMS41LTEgMS0xLjUgMi4zLTEuNSAzLjYgMCAyLjggMi4zIDUuMSA1LjEgNS4xaDQuOXYtMTAuMmgtNC45em0yMi45IDEwLjljLTYuNyAwLTEyLjEgNS40LTEyLjEgMTIuMSAwIDYuNyA1LjQgMTIuMSAxMi4xIDEyLjFoNi41VjQ2LjhoLTYuNXoiIGZpbGw9IiNmMDk0MDAiLz48L3N2Zz4="
+                                alt="Scikit-learn" class="w-8 h-8 mx-auto mb-2" aria-hidden="true" />
+                        </div>
+                        <h3 class="text-lg font-bold">Scikit-learn</h3>
+                    </div>
+
+                    <!-- Node.js -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Node.js Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <i class="fab fa-node-js text-rddev-light text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Node.js</h3>
+                    </div>
+
+                    <!-- Docker -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Docker Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <i class="fab fa-docker text-rddev-light text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Docker</h3>
+                    </div>
+
+                    <!-- PHP -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="PHP Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <i class="fab fa-php text-rddev-light text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">PHP</h3>
+                    </div>
+
+                    <!-- HTML -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="HTML Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <i class="fab fa-html5 text-rddev-light text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">HTML</h3>
+                    </div>
+
+                    <!-- Laravel -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Laravel Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 52" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+                                <path d="M49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1-.425.724l-9.375 5.385v10.639c0 .297-.159.572-.425.724L20.64 51.957a.846.846 0 0 1-.85 0L.425 41.79A.842.842 0 0 1 0 41.066V1.734a.856.856 0 0 1 .114-.43L10.352 7.76v26.441c0 .314.17.602.45.756l9.388 5.362 9.388-5.362a.851.851 0 0 0 .45-.756V12.869l8.275-4.758V11.99c0 .072.014.143.042.209l-.042.365zm-9.875 8.759L40.251 20l-9.125-5.236v10.466l9.375-5.385z" fill="#FF2D20"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">Laravel</h3>
+                    </div>
+
+                    <!-- CodeIgniter -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="CodeIgniter Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+                                <path d="M150 0L36.54 75.02v150.04L150 300l113.46-74.94V75.02L150 0zm0 75.02l-56.73 37.51v75.02l56.73 37.51 56.73-37.51V112.53L150 75.02z" fill="#EF4123"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">CodeIgniter</h3>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="JavaScript Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <i class="fab fa-js text-rddev-light text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">JavaScript</h3>
+                    </div>
+
+                    <!-- CSS -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="CSS Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <i class="fab fa-css3-alt text-rddev-light text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">CSS</h3>
+                    </div>
+
+                    <!-- TypeScript -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="TypeScript Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+                                <path fill="#007ACC" d="M0 200V0h400v400H0z"/>
+                                <path fill="#FFF" d="M87.7 213.9l25.5-15.4c4.9 8.7 9.4 16 20.1 16 10.3 0 16.8-4 16.8-19.6v-106h31.3v106.5c0 32.4-19 47.2-46.5 47.2-24.9 0-39.4-12.9-46.2-28.7m109.8-2.3l25.5-14.8c6.7 10.9 15.4 19 30.8 19 12.9 0 21.2-6.5 21.2-15.4 0-10.9-8.6-14.8-23.2-21.2l-8-3.4c-23-9.8-38.2-22.1-38.2-48.2 0-24 18.3-42.3 46.9-42.3 20.3 0 35 7.1 45.6 25.5L305 97.6c-"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">TypeScript</h3>
+                    </div>
+
+                    <!-- Java -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Java Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <i class="fab fa-java text-rddev-light text-3xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Java</h3>
+                    </div>
+
+                    <!-- C++ -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="C++ Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 306 342" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+                                <path d="M152.9 0L0 86v170l152.9 86 153-86V86z" fill="#00599C"/>
+                                <path d="M152.9 0v342l153-86V86z" fill="#004482"/>
+                                <path d="M152.9 49.2l-98.2 56.5v113.1l98.2 56.5 98.4-56.5V105.7z" fill="#005B9C"/>
+                                <path d="M152.9 49.2v56.5l98.4 56.5v-113z" fill="#00599C"/>
+                                <path d="M152.9 162.8l-98.2-56.5-54.6 31.7L152.9 249l152.9-86-54.7-31.7z" fill="#005B9C"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">C++</h3>
+                    </div>
+
+                    <!-- PostgreSQL -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="PostgreSQL Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+                                <path d="M48.8 51.3c-2.1 0-3.9-.4-5.4-1.1l2.7-5.8c1.3.7 2.6 1.1 3.8 1.1 1.2 0 1.8-.4 1.8-1.2 0-1.1-1.5-1.6-3.4-2.3-2.5-.9-5.4-2-5.4-5.5 0-3.4 2.8-5.9 6.9-5.9 2.1 0 3.8.5 5.2 1.2l-2.6 5.7c-1.1-.6-2.2-1-3.3-1-1 0-1.5.4-1.5 1 0 1 1.4 1.5 3.3 2.2 2.6.9 5.5 2 5.5 5.6 0 3.6-2.9 6-7.1 6zM65.5 45.8c0 3.6-2.2 6.3-6.2 6.3s-6.2-2.7-6.2-6.3 2.2-6.3 6.2-6.3 6.2 2.7 6.2 6.3zm-6.2-1.9c-1 0-1.6 1-1.6 1.9s.6 1.9 1.6 1.9 1.6-1 1.6-1.9-.6-1.9-1.6-1.9zM84.2 45.8c0 3.6-2.2 6.3-6.2 6.3s-6.2-2.7-6.2-6.3 2.2-6.3 6.2-6.3 6.2 2.7 6.2 6.3zm-6.2-1.9c-1 0-1.6 1-1.6 1.9s.6 1.9 1.6 1.9 1.6-1 1.6-1.9-.6-1.9-1.6-1.9z" fill="#336791"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">PostgreSQL</h3>
+                    </div>
+
+                    <!-- Vue.js -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Vue.js Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261.76 226.69" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+                                <path d="M161.096.001l-30.225 52.351L100.647.001H-.005l130.877 226.688L261.749.001z" fill="#41b883"/>
+                                <path d="M161.096.001l-30.225 52.351L100.647.001H52.346l78.526 136.01L209.398.001z" fill="#34495e"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">Vue.js</h3>
+                    </div>
+
+                    <!-- Kubernetes -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Kubernetes Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+                                <path d="M255.986 437.004l-22.734-51.57-51.998-13.334a39.742 39.742 0 0 1-30.176-32.23L147 287.288l-48.044-24.738a40.005 40.005 0 0 1-20.378-43.685l9.86-52.595-33.187-41.336a39.989 39.989 0 0 1 5.44-52.864l37.947-35.422L89.54 46.248a40.002 40.002 0 0 1 36.022-25.324h53.264l37.566-29.21a39.994 39.994 0 0 1 48.97 0l37.566 29.21h53.264a40.002 40.002 0 0 1 36.022 25.324l16.754 50.825 37.947 35.422a39.989 39.989 0 0 1 5.44 52.864l-33.187 41.336 9.86 52.595a40.005 40.005 0 0 1-20.378 43.685L365 287.288l-4.078 52.582a39.742 39.742 0 0 1-30.176 32.23l-51.998 13.334-22.734 51.57a40.013 40.013 0 0 1-47.028 22.39z" fill="#326CE5"/>
+                                <path d="M392.843 258.666l9.86-52.595-33.187-41.336a39.989 39.989 0 0 0-5.44-52.864l-37.947-35.422L309.932 25.59a40.002 40.002 0 0 0-36.022-25.324h-53.264l-37.566-29.21a39.994 39.994 0 0 0-48.97 0l-37.566 29.21h-53.264a40.002 40.002 0 0 0-36.022 25.324l-16.754 50.825-37.947 35.422a39.989 39.989 0 0 0-5.44 52.864l33.187 41.336-9.86 52.595a40.005 40.005 0 0 0 20.378 43.685L147 287.288l4.078 52.582a39.742 39.742 0 0 0 30.176 32.23l51.998 13.334 22.734 51.57a40.013 40.013 0 0 0 47.028 22.39l52.924-14.854 52.924 14.854a40.013 40.013 0 0 0 47.028-22.39l22.734-51.57 51.998-13.334a39.742 39.742 0 0 0 30.176-32.23L365 287.288l48.044-24.738a40.005 40.005 0 0 0 20.378-43.685z" fill="#326CE5"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">Kubernetes</h3>
+                    </div>
+
+                    <!-- Google Cloud -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Google Cloud Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+            <path d="M160.16 81.84l-48.42-48.42A53.49 53.49 0 0 0 74.76 12H53.44A53.49 53.49 0 0 0 0 65.44v125.12A53.49 53.49 0 0 0 53.44 244h149.12a53.49 53.49 0 0 0 53.44-53.44v-21.32a53.49 53.49 0 0 0-15.42-37.58l-48.42-48.42a53.49 53.49 0 0 0-75.68 0z" fill="#4285F4"/>
+            <path d="M160.16 174.16a53.49 53.49 0 0 1-75.68 0L36.06 125.74a53.49 53.49 0 0 1 0-75.68L84.48 1.64a53.49 53.49 0 0 1 75.68 0l48.42 48.42a53.49 53.49 0 0 1 0 75.68l-48.42 48.42z" fill="#34A853"/>
+            <path d="M128 96a32 32 0 1 0 32 32 32 32 0 0 0-32-32z" fill="#FABB05"/>
+        </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">Google Cloud</h3>
+                    </div>
+
+                    <!-- Azure -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Azure Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 204" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+            <path d="M96.25 0L0 193.75h96.25l63.75-193.75H96.25zM160 204l-63.75-96.25H0l96.25 96.25H160z" fill="#0078D4"/>
+            <path d="M256 96.25h-64.63L128 204h63.38l64.62-64.62V96.25z" fill="#50E6FF"/>
+        </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">Azure</h3>
+                    </div>
+
+                    <!-- Redis -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Redis Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+            <path d="M237.019 149.705c-13.496 7.06-83.443 35.798-98.305 43.649-14.862 7.851-23.11 7.794-34.738 2.093-11.628-5.7-86.054-35.614-99.48-42.074C4.07 146.9 0 144.074 0 141.587v-30.02s97.05-21.116 112.489-26.851c15.44-5.735 20.64-5.893 33.734-.661 13.094 5.232 94.246 19.524 107.777 25.26v29.613c0 2.625-3.878 5.19-16.98 11.787z" fill="#A41F23"/>
+            <path d="M237.019 107.684c-13.496 7.06-83.443 35.798-98.305 43.65-14.862 7.85-23.11 7.793-34.738 2.092-11.628-5.7-86.054-35.613-99.48-42.073C4.07 104.878 0 102.052 0 99.565V69.545s97.05-21.116 112.489-26.851c15.44-5.735 20.64-5.893 33.734-.661 13.094 5.232 94.246 19.524 107.777 25.26v29.613c0 2.625-3.878 5.19-16.98 11.778z" fill="#D22C26"/>
+            <path d="M237.019 68.259c-13.496 7.06-83.443 35.798-98.305 43.65-14.862 7.85-23.11 7.793-34.738 2.092-11.628-5.7-86.054-35.613-99.48-42.073C4.07 65.453 0 62.627 0 60.14V30.12s97.05-21.116 112.489-26.851c15.44-5.735 20.64-5.893 33.734-.661 13.094 5.232 94.246 19.524 107.777 25.26v29.613c0 2.625-3.878 5.19-16.98 11.778z" fill="#A41F23"/>
+        </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">Redis</h3>
+                    </div>
+
+                    <!-- Elasticsearch -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Elasticsearch Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+            <path d="M213.852 192.572c-7.486 0-14.318-3.327-19.005-8.938L127.602 97.01h-.914v54.912c0 24.912 20.19 45.102 45.102 45.102h40.063c5.831 0 10.554-4.723 10.554-10.554 0-5.83-4.723-10.554-10.554-10.554h-40.063c-13.22 0-23.994-10.774-23.994-23.994V97.01h-40.673l77.742 98.962c8.26 10.537 21.186 16.6 34.987 16.6h.914c5.83 0 10.554-4.723 10.554-10.554 0-5.83-4.723-10.554-10.554-10.554z" fill="#00BFB3"/>
+            <path d="M127.602 127.988h40.063V97.01h-40.063V42.245c0-5.83-4.723-10.554-10.554-10.554s-10.554 4.723-10.554 10.554v54.765H42.245c-5.83 0-10.554 4.723-10.554 10.554 0 5.83 4.723 10.554 10.554 10.554h64.249v30.978H42.245c-5.83 0-10.554 4.723-10.554 10.554 0 5.83 4.723 10.554 10.554 10.554h64.249v54.765c0 5.83 4.723 10.554 10.554 10.554s10.554-4.723 10.554-10.554V158.07h40.063v-30.978h-40.063z" fill="#00BFB3"/>
+        </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">Elasticsearch</h3>
+                    </div>
+
+                    <!-- RabbitMQ -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="RabbitMQ Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+            <path d="M128 0L16 64v128l112 64 112-64V64L128 0zm0 16l96 55v110l-96 55-96-55V71l96-55z" fill="#FF6600"/>
+            <path d="M83.404 92.845v70.31l44.596 25.71 44.596-25.71v-70.31L128 67.135l-44.596 25.71z" fill="#FF6600"/>
+        </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">RabbitMQ</h3>
+                    </div>
+
+                    <!-- Nginx -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Nginx Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+            <path d="M128.001 0L16 64v128l112 64 112-64V64L128.001 0zm58.684 183.01L128 211.459l-58.685-28.449V100.99L128 72.54l58.685 28.45v82.02z" fill="#269539"/>
+            <path d="M128 72.54v0l-58.685 28.45v82.02L128 211.459v-138.92z" fill="#009639"/>
+        </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">Nginx</h3>
+                    </div>
+
+                    <!-- Grafana -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Grafana Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+            <path d="M126.02 0L0 64v128l126.02 64 126.02-64V64L126.02 0zm62.94 120.88a28.49 28.49 0 0 1-15.91 25.51l-47.38 25.39a28.42 28.42 0 0 1-28.22 0l-47.38-25.39a28.49 28.49 0 0 1-15.91-25.51V76.96a28.23 28.23 0 0 1 15.91-25.34l47.38-26.38a28.42 28.42 0 0 1 28.22 0l47.38 26.38a28.23 28.23 0 0 1 15.91 25.34v43.92z" fill="#F46800"/>
+            <path d="M126.02 125.32V256l126.02-64V64l-126.02 61.32z" fill="#F46800"/>
+        </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">Grafana</h3>
+                    </div>
+
+                    <!-- Jenkins -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Jenkins Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+            <path d="M128 0C57.32 0 0 57.32 0 128s57.32 128 128 128 128-57.32 128-128S198.68 0 128 0z" fill="#D33833"/>
+            <path d="M135.974 46.36c-5.047-3.434-11.542-5.36-19.343-5.36-14.44 0-26.114 7.781-26.114 24.25 0 14.94 8.594 20.84 17.837 25.19l8.274 3.773c10.206 4.687 18.54 8.514 18.54 19.842 0 10.206-7.951 16.607-20.54 16.607-9.583 0-17.835-4.687-23.235-10.707l-8.834 10.867c6.97 7.61 17.176 12.297 31.616 12.297 18.039 0 29.453-10.206 29.453-25.75 0-15.54-9.583-21.44-19.79-26.128l-8.274-3.772c-8.334-3.827-15.54-7.953-15.54-17.536 0-8.834 6.97-14.434 16.606-14.434 7.11 0 13.61 3.434 18.039 8.274l8.834-10.366z" fill="#FFF"/>
+        </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">Jenkins</h3>
+                    </div>
+
+                    <!-- Prometheus -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Prometheus Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+            <path d="M128 0C57.32 0 0 57.32 0 128s57.32 128 128 128 128-57.32 128-128S198.68 0 128 0zm0 240c-8.576 0-16.8-1.408-24.448-4.032l10.256-24.704c4.288 1.408 8.832 2.176 13.632 2.176 24.064 0 43.776-19.456 43.776-43.44 0-24.064-19.712-43.776-43.776-43.776-24.064 0-43.44 19.712-43.44 43.776 0 4.832.8 9.376 2.24 13.632l-24.704 10.256A85.686 85.686 0 0 1 42.24 128c0-47.04 38.72-85.76 85.76-85.76s85.76 38.72 85.76 85.76-38.72 85.76-85.76 85.76z" fill="#E6522C"/>
+            <path d="M186.24 117.76c0 32.576-26.464 59.04-59.04 59.04s-59.04-26.464-59.04-59.04 26.464-59.04 59.04-59.04 59.04 26.464 59.04 59.04zM128 42.24a85.76 85.76 0 1 0 0 171.52 85.76 85.76 0 0 0 0-171.52zm0 154.112c-37.536 0-68.352-30.816-68.352-68.352s30.816-68.352 68.352-68.352 68.352 30.816 68.352 68.352-30.816 68.352-68.352 68.352z" fill="#E6522C"/>
+        </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">Prometheus</h3>
+                    </div>
+
+                    <!-- Kafka -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Kafka Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+            <path d="M128 0C57.31 0 0 57.31 0 128s57.31 128 128 128 128-57.31 128-128S198.69 0 128 0zm0 240c-8.84 0-16-7.16-16-16v-21.6c0-8.84 7.16-16 16-16h46.4l-62.4-99.2V48c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v21.6L194.4 32h-38.4c-8.84 0-16 7.16-16 16v54.4L192 192h-64v32c0 8.84-7.16 16-16 16z" fill="#231F20"/>
+        </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">Kafka</h3>
+                    </div>
+
+                    <!-- GitLab -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="GitLab Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+            <path d="M128 256l47.484-146.5H80.516L128 256z" fill="#E24329"/>
+            <path d="M128 256l-47.484-146.5H16.125L128 256z" fill="#FC6D26"/>
+            <path d="M16.125 109.5L.403 154.16a9.669 9.669 0 0 0 3.524 10.819L128 256l-111.875-146.5h27.875z" fill="#FCA326"/>
+            <path d="M16.125 109.5h64.391L47.484 38.016c-1.948-6.02-10.45-6.02-12.398 0L16.125 109.5z" fill="#E24329"/>
+            <path d="M128 256l47.484-146.5H239.75L128 256z" fill="#FC6D26"/>
+            <path d="M239.75 109.5l15.722 44.66a9.669 9.669 0 0 1-3.524 10.819L128 256l111.875-146.5h-27.875z" fill="#FCA326"/>
+            <path d="M239.75 109.5h-64.266l32.782-71.484c1.948-6.02 10.45-6.02 12.398 0l18.985 71.484z" fill="#E24329"/>
+        </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">GitLab</h3>
+                    </div>
+
+                    <!-- Terraform -->
+                    <div class="technology-item bg-rddev-darker/40 p-6 rounded-xl text-center hover:bg-rddev-darker transition duration-300" role="article" aria-label="Terraform Technology">
+                        <div class="p-4 bg-white/10 rounded-full inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-8 h-8 mx-auto mb-2" aria-hidden="true">
+            <path d="M0 0h112.64v112.64H0V0zm0 143.36h112.64V256H0V143.36zm143.36 0H256V256H143.36V143.36zm0-143.36H256v112.64H143.36V0z" fill="#7B42BC"/>
+        </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">Terraform</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Process Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Development <span class="text-rddev-light">Process</span></h2>
+                    <div class="w-24 h-1 bg-rddev-light mx-auto" aria-hidden="true"></div>
+                    <p class="text-gray-300 mt-6 max-w-2xl mx-auto">
+                        Our proven development methodology ensures quality, efficiency, and successful project delivery.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Step 1: Discovery & Planning -->
+                    <div class="bg-rddev-darker/40 p-6 rounded-xl relative">
+                        <div class="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-rddev-light flex items-center justify-center text-rddev-darker font-bold text-xl">
+                            1
+                        </div>
+                        <div class="pt-6">
+                            <h3 class="text-xl font-bold mb-4">Discovery & Planning</h3>
+                            <p class="text-gray-300">
+                                We gather requirements, analyze your needs, define project scope, and create a detailed roadmap with clear timelines and objectives.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Design & Prototyping -->
+                    <div class="bg-rddev-darker/40 p-6 rounded-xl relative">
+                        <div class="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-rddev-light flex items-center justify-center text-rddev-darker font-bold text-xl">
+                            2
+                        </div>
+                        <div class="pt-6">
+                            <h3 class="text-xl font-bold mb-4">Design & Prototyping</h3>
+                            <p class="text-gray-300">
+                                We create detailed wireframes, interactive prototypes, and design mockups to visualize the solution before development begins.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Development & Testing -->
+                    <div class="bg-rddev-darker/40 p-6 rounded-xl relative">
+                        <div class="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-rddev-light flex items-center justify-center text-rddev-darker font-bold text-xl">
+                            3
+                        </div>
+                        <div class="pt-6">
+                            <h3 class="text-xl font-bold mb-4">Development & Testing</h3>
+                            <p class="text-gray-300">
+                                Our skilled developers build the solution using clean, efficient code while our QA team performs rigorous testing throughout the development process.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Deployment & Support -->
+                    <div class="bg-rddev-darker/40 p-6 rounded-xl relative">
+                        <div class="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-rddev-light flex items-center justify-center text-rddev-darker font-bold text-xl">
+                            4
+                        </div>
+                        <div class="pt-6">
+                            <h3 class="text-xl font-bold mb-4">Deployment & Support</h3>
+                            <p class="text-gray-300">
+                                We deploy your solution, provide comprehensive training, and offer ongoing maintenance and support to ensure long-term success.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-rddev-darker/50">
+            <div class="container mx-auto px-4">
+                <div class="bg-rddev-light rounded-xl p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <div class="md:w-2/3 mb-6 md:mb-0">
+                            <h3 class="text-2xl md:text-3xl font-bold text-rddev-darker mb-2">
+                                Ready to Transform Your Business?
+                            </h3>
+                            <p class="text-rddev-darker/80">
+                                Let's discuss how our tailored software solutions can drive your business forward. Contact us for a free consultation.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="contact.html" class="inline-block bg-rddev-darker text-white hover:bg-rddev-darker/90 font-bold py-3 px-8 rounded-lg transition">
+                        Start Your Project
+                    </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-rddev-darker pt-16 pb-8">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                    <div>
+                        <h4 class="text-xl font-bold mb-6">
+                            <span class="text-2xl font-bold text-white">
+        <span class="text-rddev-light">R</span>D<span class="text-rddev-light">D</span>EV
+                            </span>
+                        </h4>
+                        <p class="text-gray-400 mb-6">
+                            Transforming ideas into digital solutions with cutting-edge software development expertise.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-rddev-light transition" aria-label="Facebook">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-rddev-light transition" aria-label="Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-rddev-light transition" aria-label="Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-rddev-light transition" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                        <ul class="space-y-3">
+                            <li><a href="index.html" class="text-gray-400 hover:text-rddev-light transition">Home</a></li>
+                            <li><a href="about.html" class="text-gray-400 hover:text-rddev-light transition">About</a></li>
+                            <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">Services</a></li>
+                            <li><a href="portfolio.html" class="text-gray-400 hover:text-rddev-light transition">Portfolio</a></li>
+                            <li><a href="contact.html" class="text-gray-400 hover:text-rddev-light transition">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-bold mb-6">Our Services</h4>
+                        <ul class="space-y-3">
+                            <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">Web Development</a></li>
+                            <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">Mobile App Development</a></li>
+                            <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">Data Analysis & AI</a></li>
+                            <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">Custom Software</a></li>
+                            <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">IT Consulting</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-bold mb-6">Contact Info</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-rddev-light mr-3 mt-1" aria-hidden="true"></i>
+                                <span class="text-gray-400">123 Tech Street, Jakarta, Indonesia</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-phone text-rddev-light mr-3" aria-hidden="true"></i>
+                                <a href="tel:+628988285622" class="text-gray-400 hover:text-rddev-light transition">
+            +62 898-828-5622
+        </a>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope text-rddev-light mr-3" aria-hidden="true"></i>
+                                <a href="mailto:rdmfr59@gmail.com" class="text-gray-400 hover:text-rddev-light transition">
+            rdmfr59@gmail.com
+        </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-700 pt-8">
+                    <p class="text-center text-gray-500">
+                        &copy; 2025 RdDev. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll to Top Button -->
+        <button id="scroll-to-top" class="fixed bottom-6 right-6 bg-rddev-light text-rddev-darker p-3 rounded-full shadow-lg z-50 hidden hover:bg-rddev-light/90 transition">
+<i class="fas fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+        <!-- JavaScript -->
+        <script>
+            // Mobile Menu Toggle
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuToggle = document.getElementById('menu-toggle');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+                // Mobile menu toggle
+                menuToggle.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!menuToggle.contains(event.target) &&
+                        !mobileMenu.contains(event.target)) {
+                        mobileMenu.classList.add('hidden');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Scroll to top button
+                window.addEventListener('scroll', function() {
+                    if (window.pageYOffset > 300) {
+                        scrollToTopBtn.classList.remove('hidden');
+                    } else {
+                        scrollToTopBtn.classList.add('hidden');
+                    }
+                });
+
+                // Scroll to top functionality
+                scrollToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+
+                // Technologies and Services Animations
+                const technologyItems = document.querySelectorAll('.technology-item');
+                const serviceCards = document.querySelectorAll('.service-card');
+
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.1
+                };
+
+                const revealOnScroll = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                            revealOnScroll.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe technology items and service cards
+                [...technologyItems, ...serviceCards].forEach(item => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    item.style.transition = 'opacity 0.6s, transform 0.6s';
+                    revealOnScroll.observe(item);
+                });
+            });
+        </script>
+</body>
+
+</html>

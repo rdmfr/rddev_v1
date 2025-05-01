@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RdDev - Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rddev-dark': '#2D3748',
+                        'rddev-darker': '#1A202C',
+                        'rddev-light': '#4FD1C5',
+                        'rddev-blue': '#4299E1',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body class="bg-gradient-to-br from-rddev-darker to-rddev-dark text-gray-100 min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-rddev-darker/90 backdrop-blur-sm z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold text-white">
+                        <span class="text-rddev-light">R</span>D<span class="text-rddev-light">D</span>EV
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-300 hover:text-rddev-light transition">Home</a>
+                    <a href="about.html" class="text-gray-300 hover:text-rddev-light transition">About</a>
+                    <a href="services.html" class="text-gray-300 hover:text-rddev-light transition">Services</a>
+                    <a href="portfolio.html" class="text-gray-300 hover:text-rddev-light transition">Portfolio</a>
+                    <a href="team.html" class="text-gray-300 hover:text-rddev-light transition">Team</a>
+                    <a href="contact.html" class="text-rddev-light font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="md:hidden text-gray-300 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t border-gray-700 mt-2">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="text-gray-300 hover:text-rddev-light transition">Home</a>
+                    <a href="about.html" class="text-gray-300 hover:text-rddev-light transition">About</a>
+                    <a href="services.html" class="text-gray-300 hover:text-rddev-light transition">Services</a>
+                    <a href="portfolio.html" class="text-gray-300 hover:text-rddev-light transition">Portfolio</a>
+                    <a href="team.html" class="text-gray-300 hover:text-rddev-light transition">Team</a>
+                    <a href="contact.html" class="text-rddev-light font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-10 md:pt-40 md:pb-16 bg-rddev-darker/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact <span class="text-rddev-light">Us</span></h1>
+                <div class="w-24 h-1 bg-rddev-light mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    We'd love to hear from you! Get in touch with us for inquiries, quotes, or support.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Details Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Contact Form -->
+                <div class="bg-rddev-darker/40 p-8 rounded-xl">
+                    <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-300 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-rddev-darker rounded-lg focus:outline-none focus:ring-2 focus:ring-rddev-light text-white" required>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-gray-300 mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-rddev-darker rounded-lg focus:outline-none focus:ring-2 focus:ring-rddev-light text-white" required>
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-gray-300 mb-2">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 bg-rddev-darker rounded-lg focus:outline-none focus:ring-2 focus:ring-rddev-light text-white">
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-gray-300 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-3 bg-rddev-darker rounded-lg focus:outline-none focus:ring-2 focus:ring-rddev-light text-white" required>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-gray-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-rddev-darker rounded-lg focus:outline-none focus:ring-2 focus:ring-rddev-light text-white" required></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit" id="submit-form" class="w-full bg-rddev-light hover:bg-rddev-light/90 text-rddev-darker font-bold py-3 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rddev-light">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+                        <p class="text-gray-300 mb-4">
+                            Feel free to reach out to us with any questions or inquiries. Our team is ready to assist you with your software development needs.
+                        </p>
+
+                        <div class="space-y-4 mt-8">
+                            <div class="flex items-start">
+                                <div class="p-3 rounded-full bg-rddev-light/20 mr-4">
+                                    <i class="fas fa-map-marker-alt text-rddev-light"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Our Location</h3>
+                                    <p class="text-gray-300">Nagreg, Bandung, Indonesia</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="p-3 rounded-full bg-rddev-light/20 mr-4">
+                                    <i class="fas fa-envelope text-rddev-light"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Email Us</h3>
+                                    <p class="text-gray-300">
+                                        <a href="mailto:rdmfr59@gmail.com" class="hover:text-rddev-light transition">rdmfr59@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="p-3 rounded-full bg-rddev-light/20 mr-4">
+                                    <i class="fas fa-phone text-rddev-light"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Call Us</h3>
+                                    <p class="text-gray-300">
+                                        <a href="tel:08988285622" class="hover:text-rddev-light transition">+62 898-828-5622</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="p-3 rounded-full bg-rddev-light/20 mr-4">
+                                    <i class="fab fa-whatsapp text-rddev-light"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">WhatsApp</h3>
+                                    <p class="text-gray-300">
+                                        <a href="https://wa.me/628988285622" target="_blank" class="hover:text-rddev-light transition">+62 898-828-5622</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Business Hours</h3>
+                        <ul class="space-y-2">
+                            <li class="flex justify-between items-center">
+                                <span class="text-gray-300">Monday - Friday:</span>
+                                <span class="font-semibold">9:00 AM - 6:00 PM</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="text-gray-300">Saturday:</span>
+                                <span class="font-semibold">10:00 AM - 4:00 PM</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="text-gray-300">Sunday:</span>
+                                <span class="font-semibold">Closed</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="p-3 bg-rddev-darker hover:bg-rddev-light/20 rounded-full transition">
+                                <i class="fab fa-facebook-f text-rddev-light"></i>
+                            </a>
+                            <a href="#" class="p-3 bg-rddev-darker hover:bg-rddev-light/20 rounded-full transition">
+                                <i class="fab fa-twitter text-rddev-light"></i>
+                            </a>
+                            <a href="#" class="p-3 bg-rddev-darker hover:bg-rddev-light/20 rounded-full transition">
+                                <i class="fab fa-instagram text-rddev-light"></i>
+                            </a>
+                            <a href="#" class="p-3 bg-rddev-darker hover:bg-rddev-light/20 rounded-full transition">
+                                <i class="fab fa-linkedin-in text-rddev-light"></i>
+                            </a>
+                            <a href="#" class="p-3 bg-rddev-darker hover:bg-rddev-light/20 rounded-full transition">
+                                <i class="fab fa-github text-rddev-light"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-rddev-darker/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Our <span class="text-rddev-light">Location</span></h2>
+                <div class="w-24 h-1 bg-rddev-light mx-auto"></div>
+            </div>
+
+            <!-- Replace with actual map embed code -->
+            <div class="w-full h-96 bg-rddev-darker/70 rounded-xl flex items-center justify-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3959.7359763709237!2d107.92593807410847!3d-7.040283668979419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMDInMjUuMCJTIDEwN8KwNTUnNDIuNyJF!5e0!3m2!1sid!2sid!4v1745985328944!5m2!1sid!2sid"
+                    width="1200" height="370" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Frequently Asked <span class="text-rddev-light">Questions</span></h2>
+                <div class="w-24 h-1 bg-rddev-light mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Find answers to common questions about our services and process.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="bg-rddev-darker/40 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-3">What services does RdDev offer?</h3>
+                    <p class="text-gray-300">
+                        RdDev offers a wide range of software development services including web development, mobile app development, custom software solutions, database management, API development, and IT consulting.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-rddev-darker/40 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-3">How much does a typical project cost?</h3>
+                    <p class="text-gray-300">
+                        Project costs vary significantly based on scope, complexity, and requirements. We provide custom quotes for each project after an initial consultation to understand your specific needs.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-rddev-darker/40 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-3">How long does the development process take?</h3>
+                    <p class="text-gray-300">
+                        Development timelines depend on project complexity. Simple websites may take a few weeks, while complex enterprise applications could take several months. We provide timeline estimates during the planning phase.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-rddev-darker/40 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-3">Do you provide ongoing support?</h3>
+                    <p class="text-gray-300">
+                        Yes, we offer various support and maintenance packages to ensure your software continues to run smoothly after launch. This includes updates, bug fixes, and technical support.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-gray-300 mb-6">
+                    Still have questions? Feel free to reach out to us directly.
+                </p>
+                <a href="#" class="inline-block bg-rddev-light hover:bg-rddev-light/90 text-rddev-darker font-bold py-3 px-8 rounded-lg transition">
+                    Ask a Question
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rddev-darker pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h4 class="text-xl font-bold mb-6">
+                        <span class="text-2xl font-bold text-white">
+                            <span class="text-rddev-light">R</span>D<span class="text-rddev-light">D</span>EV
+                        </span>
+                    </h4>
+                    <p class="text-gray-400 mb-6">
+                        Turning your ideas into digital reality with cutting-edge software development solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-rddev-light transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-rddev-light transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-rddev-light transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-rddev-light transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-rddev-light transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-rddev-light transition">About</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-rddev-light transition">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-rddev-light transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">Web Development</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">Mobile App Development</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">Custom Software</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">API Integration</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-rddev-light transition">IT Consulting</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-rddev-light mr-3 mt-1"></i>
+                            <span class="text-gray-400">Bandung, Indonesia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-rddev-light mr-3"></i>
+                            <a href="tel:08988285622" class="text-gray-400 hover:text-rddev-light transition">
+                                +62 898-828-5622
+                            </a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-rddev-light mr-3"></i>
+                            <a href="mailto:rdmfr59@gmail.com" class="text-gray-400 hover:text-rddev-light transition">
+                                rdmfr59@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-center text-gray-500">
+                    &copy; 2025 RdDev. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // For direct email link
+            const mailtoLink = `mailto:rdmfr59@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
+
+            // You could also implement form submission to a backend here
+            // For simplicity, we're just opening the mailto link
+            window.location.href = mailtoLink;
+        });
+
+        // WhatsApp direct link
+        document.querySelector('a[href^="https://wa.me/"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            const phone = '628988285622'; // Remove any non-numeric characters
+            const message = 'Halo RdDev, saya ingin bertanya tentang layanan Anda.';
+            const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappLink, '_blank');
+        });
+    </script>
+</body>
+
+</html>
